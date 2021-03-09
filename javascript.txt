@@ -2,8 +2,8 @@
 
 Console.log : bout de code réutilisable que l'on peut appeler pour effectuer certaines opérations.
 
-Variable Const  : =ré-assignable,
-	Let  : =Non ré-assignable.
+Variable Const  : = Non ré-assignable,
+	Let  : = ré-assignable.
 
 Typeof  : type de données.
 
@@ -19,18 +19,18 @@ Typeof  : type de données.
 
      //  Autres données (mutable)  \\
 
-	Array :  stocker plusieurs valeurs au sein d'une même variable.
+	Array : Tableau -  stocker plusieurs valeurs au sein d'une même variable.
 
 	Function : bloc de code utilisé pour exécuter un ensemble d'instructions.
 
 
 If  :  vérifie une condition (précisée entre les parenthèses). si vraie = executable.
 
+Else if : ajoute des "embranchements" pour traiter plus de cas
+
 Else : Ajoute une autre instruction  si la condition est fausse.
 
 Prompt : fonction qui va afficher une boite de dialogue permettant à l'utilisateur d'entrer du texte.
-
-Else if : ajoute des "embranchements" pour traiter plus de cas
 
 Valeur truthy : évalué comme vraie  
              falsy   : évalué comme faux  ( fasle , " " , 0 , -0 , null , undefined , Nan. ) 

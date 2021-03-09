@@ -1,0 +1,97 @@
+<Script> : entre le <body> permet de mettre su JavaSpript (JS).
+
+Console.log : bout de code réutilisable que l'on peut appeler pour effectuer certaines opérations.
+
+Variable Const  : =ré-assignable,
+	Let  : =Non ré-assignable.
+
+Typeof  : type de données.
+
+     //  Données primitifs (immuables)  \\
+
+	Boolean = vrai ou faux.
+
+	String = message entre " " ou ' '.
+
+	Null =  absence intentionnelle de valeur.
+
+	Undefined : variable existante mais sans valeur.
+
+     //  Autres données (mutable)  \\
+
+	Array :  stocker plusieurs valeurs au sein d'une même variable.
+
+	Function : bloc de code utilisé pour exécuter un ensemble d'instructions.
+
+
+If  :  vérifie une condition (précisée entre les parenthèses). si vraie = executable.
+
+Else : Ajoute une autre instruction  si la condition est fausse.
+
+Prompt : fonction qui va afficher une boite de dialogue permettant à l'utilisateur d'entrer du texte.
+
+Else if : ajoute des "embranchements" pour traiter plus de cas
+
+Valeur truthy : évalué comme vraie  
+             falsy   : évalué comme faux  ( fasle , " " , 0 , -0 , null , undefined , Nan. ) 
+
+! = inversement de boolean  (ex : !false = true)
+
+&& = and ,
+
+|| = or.
+
+Switch : comparaison de valeur ,
+Case = case de comparaison.
+
+/!\ break : pour marquer la fin d'une comparaison  /!\
+
+LA CONCATENATION : Le fait d'accoler plusieurs chaînes les unes à la suite des autres  (ex: "hello" + "I'm" + "Bob" ).
+
+L'INTERPOLATION DE CHAINES :  Il suffit d'écrire la chaîne avec des "backticks" (``) à la place des guillemets simples ou doubles.
+
+Return :  stoppe immédiatement l'exécution de la fonction pour revenir au code appelant.
+
+----------------------------------------------------------------------------------------TABLEAU ----------------------------------------------------------------------
+
+Créer Tableau : crochets  [] et écris à l'intérieur les éléments que tu veux.
+
+Pour accéder à un élément du tableau, tape le nom du tableau et la position de l'élément auquel tu veux accéder entre les crochets. 
+(commence toujours par 0).
+
+pour changer  une valeur dans le tableur :  nom de la valeur [ position de l'élement ] = nouveau nom de valeur .
+
+Longeur du tableau : faire console.log(nom-tableau.length).
+
+Push : AJOUTE un élément a la FIN (ex: nom-tableau.push("nom-ajout")  ) .
+
+Unshift : AJOUTE un élément DEBUT .
+
+Pop : SUPPRIME un éléments a la FIN .
+
+Shift : SUPPRIME un élément au DEBUT.
+
+Concat : fusionne deux tableaux en un.
+
+Join : transforme le tabeau en chaine de caractères OU change le séparateur (ex: * , - )
+
+Includes : retournera vrai ou faux si le tableau comprend l'élément donné. (ex: nom-tableau.includes("banane")  // true 			// false
+											si dans tableau	si pas dans tableau
+
+LastIndexOf : renverra le dernier index (position dans le tableau) où un élément spécifique a été vu.
+
+IndexOf : retournera la première position obtenue lorsque l'élément a été vu.
+
+Sort :  triera le tableau par ordre alphabétique.
+
+--------------------------------------------------------------------------------------------------BOUCLES-----------------------------------------------------------------------------------
+
+La déclaration for nécessite 3 paramètres pour fonctionner:
+
+Le premier est une variable appelée itérateur  (i) , que nous devons créer et fixer à une valeur (ici nous voulons partir de zéro). Cette variable sera notre "compteur".
+
+La seconde est la condition que nous voulons atteindre avant d'arrêter la boucle.
+
+Et la troisième est l'incrément. L'incrément sera exécuté à la fin de chaque boucle et, généralement, nous ajoutons un à l'itérateur.
+
+(i++) = (i+=1)   pour augmenter plus rapidement  (ex: i+=10).

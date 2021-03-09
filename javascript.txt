@@ -1,97 +1,160 @@
-<Script> : entre le <body> permet de mettre su JavaSpript (JS).
+Ecriture en camelCase => minuscule au début puis majuscule a l'interieur.
+ECMa Script => Standards JavaScript.
+Variable let et const apparition ES12 => 2021
 
-Console.log : bout de code réutilisable que l'on peut appeler pour effectuer certaines opérations.
+Ajout d'un JS dans une page HTML (dans le body)
+	<script>
+		console.log ("Bonjour");
+	</script>
 
-Variable Const  : = Non ré-assignable,
-	Let  : = ré-assignable.
+Ajout avc un fichier externe script.js
+	<script src="script.js"></script>
 
-Typeof  : type de données.
+Insertion de commentaire
+	1	// Commentaire 
 
-     //  Données primitifs (immuables)  \\
+	1	/* Commentaire
+	2	   Ici		*/
 
-	Boolean = vrai ou faux.
+	1	/**
+	2	*  Ici
+	3	*  le
+	4	*  commentaire
+	5	*/
+ 
 
-	String = message entre " " ou ' '.
+console.log ("Bonjour"); => Affiche "Bonjour" sur la console.
+const => Variable dont le type ne change pas (tableau, ligne de texte) ou la variable ne change pas. Non ré-assignable
+	const name = "Bob";
+	name = "John";
+let => Variable qui peut reasigner et bouger,changer. Ré-assignable
+type of 1; => reponse 'Number'
+type of True; => reponse 'bolean'
 
-	Null =  absence intentionnelle de valeur.
 
-	Undefined : variable existante mais sans valeur.
+Variable de condition:
+	==	même valeur
+	=== 	même valeur et même type
+	!=	pas égal (valeur)
+	!==	pas égal (valeur ou type)
+	if texte === falses	=>	if !texte
+	&& = and , et
+	|| = or, ou
 
-     //  Autres données (mutable)  \\
 
-	Array : Tableau -  stocker plusieurs valeurs au sein d'une même variable.
+	//Données primitifs\\			//Données complexes\\
+Boolean (vrai ou faux)			Function (Fonction)
+string ("chaine de caractére")		Object (Plusieurs boites)
+	message entre " " ou ' '	Array (Cas particulier d'object
+Number (Nombre)					tableau avec plusieurs valeurs)
+Null (Pas de valeur => 'objet')		
+Undefined (pas déclaré)
+	 [immutables]				 [mutables]
 
-	Function : bloc de code utilisé pour exécuter un ensemble d'instructions.
 
+If (condition) { ce qu'il faut faire }
+else if (si autre condition) { }
+else { sinon on fait }	
 
 If  :  vérifie une condition (précisée entre les parenthèses). si vraie = executable.
-
 Else if : ajoute des "embranchements" pour traiter plus de cas
-
 Else : Ajoute une autre instruction  si la condition est fausse.
 
-Prompt : fonction qui va afficher une boite de dialogue permettant à l'utilisateur d'entrer du texte.
+les ternaires => if => ? et Else => :
 
-Valeur truthy : évalué comme vraie  
-             falsy   : évalué comme faux  ( fasle , " " , 0 , -0 , null , undefined , Nan. ) 
-
+const userName = prompt ("What's your name?"); => ecrire du texte et enregistrer la reponse sur userName
 ! = inversement de boolean  (ex : !false = true)
 
-&& = and ,
-
-|| = or.
-
-Switch : comparaison de valeur ,
-Case = case de comparaison.
-
-/!\ break : pour marquer la fin d'une comparaison  /!\
+let userCountry = prompt ("Where are you from?");
+switch (userCountry){
+	Case "France":
+	Console.log ("Bonjour");
+	breack;
+	Case "England":
+	Console.log ("Hello");
+	breack;
+	...
+}	/!\ break : pour marquer la fin d'une comparaison  /!\
 
 LA CONCATENATION : Le fait d'accoler plusieurs chaînes les unes à la suite des autres  (ex: "hello" + "I'm" + "Bob" ).
 
 L'INTERPOLATION DE CHAINES :  Il suffit d'écrire la chaîne avec des "backticks" (``) à la place des guillemets simples ou doubles.
+Inserer une valeur ds une chaine => `Hello, ${name}`;
 
-Return :  stoppe immédiatement l'exécution de la fonction pour revenir au code appelant.
-
-----------------------------------------------------------------------------------------TABLEAU ----------------------------------------------------------------------
-
+/////Tableau\\\\\
 Créer Tableau : crochets  [] et écris à l'intérieur les éléments que tu veux.
+Pour changer  une valeur dans le tableur :  nom de la valeur [ position de l'élement ] = nouveau nom de valeur 
 
-Pour accéder à un élément du tableau, tape le nom du tableau et la position de l'élément auquel tu veux accéder entre les crochets. 
-(commence toujours par 0).
+concat: ƒ concat()	=>	=>	fusionne deux tableaux en un.
+copyWithin: ƒ copyWithin()
+entries: ƒ entries()
+every: ƒ every()
+fill: ƒ fill()
+filter: ƒ filter()
+find: ƒ find()
+findIndex: ƒ findIndex()
+flat: ƒ flat()
+flatMap: ƒ flatMap()
+forEach: ƒ forEach()
+includes: ƒ includes()	=>	=>	Verifie la présence dans un tableau. 
+					(ex: nom-tableau.includes("banane")  // true 	// false
+indexOf: ƒ indexOf()	=>	=>	retournera la première position obtenue lorsque l'élément a été vu.
+join: ƒ join()	=>	=>	=>	transforme le tabeau en chaine de caractères OU change le séparateur (ex: * , - )
+keys: ƒ keys()
+lastIndexOf: ƒ lastIndexOf()	=>	renverra le dernier index (position dans le tableau) où un élément spécifique a été vu.
+length: 0	=>	=>	=>	Longeur du tableau : faire console.log(nom-tableau.length).
+map: ƒ map()
+pop: ƒ pop()	=>	=>	=>	SUPPRIME un éléments a la FIN du tableau.
+push: ƒ push()	=>	=>	=>	AJOUTE un élément a la FIN du tableau (ex: nomTableau.push("nom-ajout"); ).
+reduce: ƒ reduce()
+reduceRight: ƒ reduceRight()
+reverse: ƒ reverse()
+shift: ƒ shift()	=>	=>	SUPPRIME le premier élément du tableau.
+slice: ƒ slice()
+some: ƒ some()
+sort: ƒ sort()	=>	=>	=>	triera le tableau par ordre alphabétique.
+splice: ƒ splice()
+toLocaleString: ƒ toLocaleString()
+toString: ƒ toString()
+unshift: ƒ unshift()	=>	=>	AJOUTE un élément DEBUT
+values: ƒ values()
+Split: 	=>	=>	=>	=>	sépare un text en tableau
 
-pour changer  une valeur dans le tableur :  nom de la valeur [ position de l'élement ] = nouveau nom de valeur .
+Parcourir un tableau
+	for (let i = 0; i< tableau.length; i++){
+	console.log (Tableau [i]);
+	}		=> consultation d'un tableau
 
-Longeur du tableau : faire console.log(nom-tableau.length).
+///// D.R.Y - Don't repeat Yourself \\\\\
+Créer une fonction ou une boucle
 
-Push : AJOUTE un élément a la FIN (ex: nom-tableau.push("nom-ajout")  ) .
+// Fonction
+Function sum (a,b){
+	return a+b;
+}
+console.log(sum(1,2));
 
-Unshift : AJOUTE un élément DEBUT .
+// Boucle
+let i=0;
+while (i<5){
+	console.log(`turn number ${i}`);
+	i++;
+}			=> Boucle
 
-Pop : SUPPRIME un éléments a la FIN .
+let i=0;
+do {
+	console.log(`turn number ${i}`);
+	i++;
+} while (i<5);		=> boucle avec condition a la fin
 
-Shift : SUPPRIME un élément au DEBUT.
+for (let i=0; i < nomTableau.length; i++){
+console.log ("turn number" + i );
+}			=> boucle juqu'a la fin d'un tableau
 
-Concat : fusionne deux tableaux en un.
 
-Join : transforme le tabeau en chaine de caractères OU change le séparateur (ex: * , - )
 
-Includes : retournera vrai ou faux si le tableau comprend l'élément donné. (ex: nom-tableau.includes("banane")  // true 			// false
-											si dans tableau	si pas dans tableau
 
-LastIndexOf : renverra le dernier index (position dans le tableau) où un élément spécifique a été vu.
 
-IndexOf : retournera la première position obtenue lorsque l'élément a été vu.
 
-Sort :  triera le tableau par ordre alphabétique.
 
---------------------------------------------------------------------------------------------------BOUCLES-----------------------------------------------------------------------------------
 
-La déclaration for nécessite 3 paramètres pour fonctionner:
-
-Le premier est une variable appelée itérateur  (i) , que nous devons créer et fixer à une valeur (ici nous voulons partir de zéro). Cette variable sera notre "compteur".
-
-La seconde est la condition que nous voulons atteindre avant d'arrêter la boucle.
-
-Et la troisième est l'incrément. L'incrément sera exécuté à la fin de chaque boucle et, généralement, nous ajoutons un à l'itérateur.
-
-(i++) = (i+=1)   pour augmenter plus rapidement  (ex: i+=10).

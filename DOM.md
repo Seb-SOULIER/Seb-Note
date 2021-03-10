@@ -86,3 +86,31 @@ for (let i=0; i < ListImg.length; i++){                   =>  fait une boucle su
 someDiv.style.backgroundColor = "light-blue";
 someText.style.fontSize = "20px";
 
+const boxSty = document.querySelector(".box");    => Variable pour les elements box
+boxSty.style.backgroundColor = "yellow";          => Defini la couleur de fond Jaune
+boxSty.style.height = "300px";                    => Defini la hauteur de 300 px
+boxSty.style.width = "400px";                     => Defini la largeur de 400 px
+
+const textChang = document.querySelector(".title");   => Variable pour les elements titre 
+textChang.style.fontSize = "60px";                    => Defini la taille du text
+textChang.style.textAlign = "center";                 => Defini la position du text
+textChang.style.color = 'lightBlue';                  => Defini la couleur du text
+
+# Ajouter/Supprimer une classe à un élément
+element.classList.add('myClass');
+element.classList.remove('myClass');
+
+const newBox = document.createElement("div");                     => creer un element dans la box div
+newBox.classList.add('box');                                      => ajout la class box
+const containerBox = document.querySelector(".container-boxes");  => creer un variable pour contenaire
+containerBox.appendChild(newBox);                                 => ajout la box au contenaire
+
+## Gestionnaires d'événements
+someDiv.onclick = function(){
+	someDiv.style.backgroundColor = "red";
+}
+
+# AddEventListener
+someDiv.addEventListener('click', function(){
+someDiv.style.backgroundColor = "red";
+})

@@ -113,7 +113,7 @@ shift: ƒ shift()	=>	=>	SUPPRIME le premier élément du tableau.
 slice: ƒ slice()
 some: ƒ some()
 sort: ƒ sort()	=>	=>	=>	triera le tableau par ordre alphabétique.
-splice: ƒ splice()
+splice: ƒ splice()	=>	=>	tableau.splice(1,0,'ajout');	1=position ds le tableau, 0=supression ds le tableau
 toLocaleString: ƒ toLocaleString()
 toString: ƒ toString()
 unshift: ƒ unshift()	=>	=>	AJOUTE un élément DEBUT

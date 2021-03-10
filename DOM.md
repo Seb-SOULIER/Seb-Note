@@ -114,3 +114,19 @@ someDiv.onclick = function(){
 someDiv.addEventListener('click', function(){
 someDiv.style.backgroundColor = "red";
 })
+
+//exemple//
+const imageChien = document.querySelector(".img-dogs");		=>	Variable pour l'image du chien
+imageChien.addEventListener("click", function () {		=>	Si click sur la photo
+  imageChien.src = "https://placekitten.com/200/286";		=>	attribution de la nouvelle photo
+  imageChien.alt = "Chat!!";					=>	changement du text de la photo
+});
+const survtitle = document.querySelector(".title");		=>	Variable pour le titre
+survtitle.addEventListener("mouseover", function () {		=>	si souris passe dessus
+  survtitle.style.color = "red";				=>	Couleur du texte devient rouge
+});
+survtitle.addEventListener("mouseleave", function () {		=>	si souris s'en va
+  survtitle.style.color = "black";				=>	couleur du texte devient noir
+});
+
+## Travailler avec un formulaire form

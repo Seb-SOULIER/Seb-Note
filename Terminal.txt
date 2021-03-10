@@ -11,3 +11,10 @@ git commit -m origin master => valider les modifications
 git init => initialise une branch
 echo => ecrire dans un fichier
 cat => lecture d'un fichier
+cd/
+ls => dir cd qu'il y a
+ls -a avec les fichiers cachés
+/root
+~utilisateur
+mkdir.dossier => creation d'un dossier
+../ =>Dossier parent

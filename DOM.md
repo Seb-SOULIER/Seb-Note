@@ -130,4 +130,37 @@ survtitle.addEventListener("mouseleave", function () {		=>	si souris s'en va
 });
 
 ## Travailler avec un formulaire form
+const form = document.querySelector("#form");
+const firstName = document.querySelector("#firstname");
+const lastName = document.querySelector("#lastname");
+form.onsubmit = function(event) {
+  event.preventDefault();
+  console.log(`Hello, ${firstName.value} ${lastName.value}`);
+};
+
+const form = document.querySelector("#form");			=> creation des variables avec les DOM
+const inputTodo = document.querySelector("#todoInput");
+const todolist = document.querySelector("#todolist");
+form.onsubmit = function(event) {				=> fonction onsubmit
+  event.preventDefault();					=> Nous voulons empêcher la page de se relooker.
+  const newTodo = document.createElement("li");			=> Nous créons une variable que nous fixons à un nouveau noeud li
+  newTodo.innerHTML = inputTodo.value;				=> Nous ajoutons le texte à "li"
+  todolist.appendChild(newTodo);				=> On ajoute "li" à l'ul
+  inputTodo.value = "";						=> Nous effaçons la valeur de inputTodo
+};
+
+# Changer une classe
+element.classList.toggle("mystyle");
+
+const button = document.querySelector(".dropdown-btn");
+const listIcon = document.querySelector(".dropdown-menu-content");
+button.addEventListener('click', function(){
+  listIcon.classList.toggle("visible");
+});
+
+# Obtenir des informations sur l'événement event
+const positionMouse = document.querySelector("#title-cursor-position");		=> Variable du texte de la position de la mouse
+document.body.addEventListener("mousemove", function (event) {			=> Si la souris bouge
+  positionMouse.innerHTML = `x:${event.clientX}, y:${event.clientY}`;		=> le texte position de souris deviens
+});
 

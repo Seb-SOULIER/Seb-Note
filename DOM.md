@@ -1,4 +1,4 @@
-### Qu'est-ce que le DOM?
+# Qu'est-ce que le DOM?
 
 DOM signifie Document Object Model. C'est une interface utilisée pour manipuler le contenu d'une page HTML.  
 console.log(document);    =>  voir le document
@@ -15,7 +15,7 @@ const catImage = document.querySelector('.img-cat');
 // We set the source of the image to a new url  
 catImage.src = "https://placekitten.com/200/286";  
 
-# InnerHTML :  
+### InnerHTML :  
 const title = document.querySelector('.title');  
 title.innerHTML = "Hello, Bob!";  
 
@@ -26,7 +26,7 @@ const title = document.querySelector('.title');
 // We replaced what's between the two tag by a template string with userName
 title.innerHTML = `Hello, ${userName}`;
 
-# getElementBy
+### getElementBy
 const title = document.getElementById('title');
 const heading = document.getElementsByTagName('h1');
 
@@ -36,7 +36,7 @@ const dogImg = document.getElementById("dog-img");
 dogImg.width = "500";
 dogImg.alt = "A sleeping dog";
 
-# Sélectionner plusieurs éléments qui ont la même classe/la même balise
+### Sélectionner plusieurs éléments qui ont la même classe/la même balise
 document.querySelectorAll('h1');
 
 const dogsPicture = [

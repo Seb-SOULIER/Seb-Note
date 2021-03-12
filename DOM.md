@@ -3,24 +3,24 @@
 DOM signifie Document Object Model. C'est une interface utilisée pour manipuler le contenu d'une page HTML.  
 console.log(document);    =>  voir le document
 
-## Sélectionner et modifier des éléments HTML
-const someDivClass = document.querySelector('.my-div');
-const someImg = document.querySelector('.my-img');
-const someDivId = document.querySelector('#another-div');
-const someH1 = document.querySelector('.my-div h1');
+## Sélectionner et modifier des éléments HTML  
+const someDivClass = document.querySelector('.my-div');  
+const someImg = document.querySelector('.my-img');  
+const someDivId = document.querySelector('#another-div');  
+const someH1 = document.querySelector('.my-div h1');  
 
-changer une image:
-// We create a variable catImage set to our first DOM node that have the class .img-cat
-const catImage = document.querySelector('.img-cat');
-// We set the source of the image to a new url
-catImage.src = "https://placekitten.com/200/286";
+changer une image:  
+// We create a variable catImage set to our first DOM node that have the class .img-cat  
+const catImage = document.querySelector('.img-cat');  
+// We set the source of the image to a new url  
+catImage.src = "https://placekitten.com/200/286";  
 
-# InnerHTML :
-const title = document.querySelector('.title');
-title.innerHTML = "Hello, Bob!";
+# InnerHTML :  
+const title = document.querySelector('.title');  
+title.innerHTML = "Hello, Bob!";  
 
-// We create a variable userName set to the result of prompt
-const userName = prompt("What's your name");
+// We create a variable userName set to the result of prompt  
+const userName = prompt("What's your name");  
 // We create a variable set to the first element that match .title
 const title = document.querySelector('.title');
 // We replaced what's between the two tag by a template string with userName

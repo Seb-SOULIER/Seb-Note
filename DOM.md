@@ -1,7 +1,7 @@
 ### Qu'est-ce que le DOM?
 
-DOM signifie Document Object Model. C'est une interface utilisée pour manipuler le contenu d'une page HTML. 
-* console.log(document);    =>  voir le document
+DOM signifie Document Object Model. C'est une interface utilisée pour manipuler le contenu d'une page HTML.  
+console.log(document);    =>  voir le document
 
 ## Sélectionner et modifier des éléments HTML
 const someDivClass = document.querySelector('.my-div');

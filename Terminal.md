@@ -109,95 +109,46 @@ Maintenant, accédez à la page de votre dépôt sur GitHub.com et actualisez la
 
 Commandes du terminal
 ```js
-// Créer un nouveau dossier (aka make directory)  
-mkdir <FOLDERNAME>  
+mkdir <FOLDERNAME> // Créer un nouveau dossier (aka make directory)
+cd <FOLDERNAME> // Naviguer dans un dossier existant (aka change directory)
+ls // Lister les éléments dans un dossier
+ls -a // Lister les éléments dans un dossier avec les fichiers cachés  
+echo fichier "text" // Ecrire dans un fichier  
+cat fichier // Lecture d'un fichier  
+cd/  // Retour racine
+root  // Retour racine
+~utilisateur  // Retour utilisateur
+../ // Dossier parent  
+```
+```js
+git init // Activez Git pour un repertoire
+git status // Vérifiez l'état des modifications dans un dépôt
+git diff // Afficher les modifications apportés aux fichiers
+git add <FILENAME> // Ajouter les modifications d'un fichier à soumettre
+git add . // Pour ajouter toutes les modifications d'un seul coup
+git commit -m "your commit message" // Pour soumettre les modifications que vous avez ajoutées avec un court message décrivant les modifications
+git remote add <REMOTENAME> <URL> // Ajouter un remote
+git remote set-url <REMOTENAME> <URL> // Modifier l'URL d'un remote
+git remote -v // Afficher l'adresse d'un remote
+git pull <REMOTENAME> <BRANCHNAME> // Tirer des changement à partir d'un remote
+git push <REMOTENAME> <BRANCH> // Pousser des modifications
+git checkout -b <BRANCHNAME> // Vous pouvez créer et passer sur une branche en une seule commande
+git branch <BRANCHNAME> // Créer une nouvelle branche
+git checkout <BRANCHNAME> // Se déplacer sur une branche
+git branch // Lister les branches
+git branch -m <NEWBRANCHNAME> // Renommer la branche courante
+git status // Vérifiez la branche sur laquelle vous travaillez
+git merge <BRANCHNAME> // Fusionner une branche dans la branche courante
+git branch -d <BRANCHNAME> // Supprimer une branche locale
+git push <REMOTENAME> --delete <BRANCHNAME> // Supprimer une branche distante
+git pull <REMOTENAME> <BRANCHNAME> // Tirer depuis une branche distante
+```
+```js
+.gitignore  // Fichier nommé dedans ignoré dans le git 
+:WQ //enregistrer et quitter  
+:QA // Sortir sans quitter  
+```
 
-// Naviguer dans un dossier existant (aka change directory)
-cd <FOLDERNAME>
-
-// Lister les éléments dans un dossier
-ls
-
-// Activez Git pour un repertoire
-git init
-
-// Vérifiez l'état des modifications dans un dépôt
-git status
-
-// Afficher les modifications apportés aux fichiers
-git diff
-
-// Ajouter les modifications d'un fichier à soumettre
-git add <FILENAME>
-// Pour ajouter toutes les modifications d'un seul coup
-git add .
-
-// Pour soumettre les modifications que vous avez ajoutées avec un court message décrivant les modifications
-git commit -m "your commit message"
-
-// Ajouter un remote
-git remote add <REMOTENAME> <URL>
-// Modifier l'URL d'un remote
-git remote set-url <REMOTENAME> <URL>
-// Afficher l'adresse d'un remote
-git remote -v
-
-// Tirer des changement à partir d'un remote
-git pull <REMOTENAME> <BRANCHNAME>
-
-Pousser des modifications
-git push <REMOTENAME> <BRANCH>
-
-
-Ajouter un remote
-git remote add <REMOTENAME> <URL>
-Changer l'URL d'un remote
-git remote set-url <REMOTENAME> <URL>
-Afficher l'adresse des remotes
-git remote -v
-
-Vous pouvez créer et passer sur une branche en une seule commande
-git checkout -b <BRANCHNAME>
-Créer une nouvelle branche
-git branch <BRANCHNAME>
-Se déplacer sur une branche
-git checkout <BRANCHNAME>
-Lister les branches
-git branch
-Renommer la branche courante
-git branch -m <NEWBRANCHNAME>
-Vérifiez la branche sur laquelle vous travaillez
-git status
-
-Fusionner une branche dans la branche courante
-git merge <BRANCHNAME>
-Changer la branche sur laquelle vous travaillez
-git checkout <BRANCHNAME>
-Supprimer une branche locale
-git branch -d <BRANCHNAME>
-Supprimer une branche distante
-git push <REMOTENAME> --delete <BRANCHNAME>
-Tirer depuis une branche distante
-git pull <REMOTENAME> <BRANCHNAME>
-
-.gitignore => fichier nommé dedans ignoré dans le git  
-:WQ   => enregistrer et quitter  
-:QA   => Sortir sans quitter  
-git pull  => tirer le projet  
-git push  => envoyer le projet  
-git checkout-b "nom de la branch"  
-girt branch -d  
-git commit -m origin master => valider les modifications  
-git init => initialise une branch  
-echo => ecrire dans un fichier  
-cat => lecture d'un fichier  
-cd/  
-ls => dir cd qu'il y a  
-ls -a avec les fichiers cachés  
-/root  
-~utilisateur  
-mkdir.dossier => creation d'un dossier  
-../ =>Dossier parent  
 
 
 

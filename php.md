@@ -236,3 +236,18 @@ echo implode (',', $persons);
 // pour utiliser implode(), le délimiteur est un paramètre optionnel
 echo implode($persons); // affiche "HarrisonStevenGeorge".
 ```
+```php
+# Les tableaux et boucles en PHP
+$weapons = ['whip', 'gun', 'saber'];
+$weapons[] = 'nuclear';
+var_dump($weapons);
+/*
+  var_dump affichera :
+  array(4) {
+    [0] => string(4) "whip"
+    [1] => string(3) "gun"
+    [2] => string(5) "saber"
+    [3] => string(7) "nuclear"
+  }
+*/
+```

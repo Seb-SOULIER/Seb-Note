@@ -130,3 +130,109 @@ function add() {
 
 La portée des variables  
 http://php.net/manual/fr/language.variables.scope.php  
+
+# Les chaînes de caractères en PHP
+Une chaîne de caractères (ou string en anglais) est, comme son nom l'indique, une suite de caractères (lettres, chiffres, ponctuation...), placés dans un ordre défini.
+Pour faire plus simple, un mot ou une phrase sont des chaînes de caractères. Au même titre que les integer ou les array, les string sont un type de données en PHP (mais également dans la plupart des langages informatiques).  
+
+```php
+echo 'Je suis professeur'; // affiche : Je suis professeur
+
+echo 'J\'aime porter un chapeau'; // affiche : J'aime porter un chapeau
+echo "J'aime porter un chapeau"; // affiche la même chose, pas besoin d'échapper une simple quote dans des doubles quotes et vice versa
+
+$firstname = 'Indiana';
+$presentation = 'Indiana Jones est un célèbre archéologue';
+echo $firstname; // affiche : Indiana
+echo '$firstname'; // affiche : $firstname
+echo "$firstname"; // affiche : Indiana
+
+$firstname = 'Indiana';
+$lastname = 'Jones';
+echo $firstname . $lastname;  // affiche : IndianaJones
+$fullname = $firstname . ' ' . $lastname; // le résultat d'une concaténation peut aussi être enregistré dans une variable.  
+echo $fullname; // affiche : Indiana Jones
+
+$presentation = "$firstname $lastname est un célèbre archéologue"; // les variables sont interprétées 
+echo $presentation; // affiche : Indiana Jones est un célèbre archéologue
+
+$film = $fullname . ' et le temple maudit';
+echo $film; // affiche : Indiana Jones et le temple maudit;
+
+$avis = 'Jaime bien regarder ' . $film;
+echo $avis;  // affiche : J'aime bien regarder Indiana Jones et le temple maudit;
+
+$name = 'Indiana';
+$name .= ' Jones'; // équivalent à $name = $name . ' Jones';
+echo $name; // affiche : Indiana Jones
+```
+
+```php
+$actor = 'Harrison Ford';
+echo $actor[0]; // affiche 'H' car c'est le premier caractère de la chaîne $actor;
+echo $actor[1]; // affiche 'a', le second caractère.
+echo $actor[9]; // affiche 'F'
+echo $actor[25]; // affiche une erreur car ce caractère n'existe pas dans la chaîne !
+
+$actor = 'Sean Connery';
+echo $actor[-1]; // affiche 'y' car c'est le dernier caractère de la chaîne
+echo $actor[-7]; // affiche 'C' car c'est le septième caractère de la chaîne en partant de la fin
+echo $actor[-25]; // affiche une erreur car ce caractère n'existe pas dans la chaîne !
+```
+
+strlen : permet de connaître la taille d'une chaîne, c'est-à-dire le nombre de caractères qui la composent.
+```php
+$weapon = 'fouet';
+$length = strlen($weapon); // vaut 5, car fouet contient 5 caractères;
+```
+
+trim : permet de tronquer les caractères blancs (espaces, tabulation...) en début et fin d'une chaîne. Il existe les variantes ltrim (left) et rtrim (right) qui font la même chose, mais seulement à gauche et à droite de la chaîne.
+
+Note également qu'il est possible (optionnellement) d'indiquer à trim un autre type de caractère à tronquer à la place des blancs.
+```php
+$temple = ' maudit  ';
+echo $temple; // affiche " maudit  "
+echo trim($temple); //  affiche "maudit"
+echo ltrim($temple); // affiche "maudit  ";
+echo rtrim($temple); // affiche " maudit";
+```
+Manipulation de la casse : PHP est sensible à la casse. C'est-à-dire qu'un caractère minuscule est différent du même caractère en majuscule.
+
+Autrement dit, 'a' != 'A'. Il existe cependant plusieurs fonctions pour modifier la casse.  
+Ainsi, strtoupper, renvoie une chaîne en majuscule, tandis que strtolower renvoie une chaîne en minuscule.  
+Des variantes existent, comme ucfirst qui convertit le premier caractère d'une chaîne en majuscule, ou encore ucwords qui convertit chaque première lettre des mots d'une phrase en majuscule.  
+
+```php
+$name = 'indiana jones';
+echo strtoupper($name); // affiche 'INDIANA JONES'
+echo ucfirst($name); // affiche 'Indiana jones'
+echo ucwords($name); // affiche 'Indiana Jones'
+```
+str_replace : cette fonction permet de remplacer tout ou partie d'une chaîne par une autre chaîne.
+```php
+$text = 'Indiana Jones est un professeur';
+echo str_replace('professeur', 'aventurier', $text); // affiche : "Indiana Jones est un aventurier"
+echo str_replace('archéologue', 'aventurier', $text); // affiche : "Indiana Jones est un professeur" car le terme "archéologue" n'est pas présent dans $text
+```
+Bien entendu, cela fonctionne uniquement si le motif recherché est trouvé dans la chaîne, sinon la chaîne d'origine non modifiée est renvoyée.  
+Par défaut, str_replace est sensible à la casse, mais il existe str_ireplace qui lui, y est insensible.
+
+Conversion : il existe également des fonctions qui vont aider à échapper certains caractères automatiquement. Par exemple, htmlentities convertit automatiquement les balises HTML contenues dans la chaîne, pour qu'elles ne soient pas interprétées à l'affichage.
+
+Cela évite des problèmes d'affichage ou d'injection de code malveillant dans une page. Il existe d'autres fonctions utiles comme addslashes, url_encode, nl2br...
+
+explode et implode : Ces deux fonctions, souvent indissociables l'une de l'autre, sont très utilisées.
+
+Elles permettent pour explode de convertir une chaîne de caractères en un tableau (en fonction d'un délimiteur) et pour implode, de faire l'opération inverse.
+```php
+$team = 'Harrison Steven George';
+$persons = explode(' ', $team); 
+// la chaîne $team a été explosée en fonction du délimiteur 'espace', en un tableau contenant ['Harrison', 'Steven', 'George']. 
+// le caractère délimiteur 'espace' n'est plus présent dans le tableau obtenu.
+// Pour utiliser explode(), le délimiteur est un paramètre obligatoire.
+echo implode (',', $persons); 
+// implode prend en paramètres un délimiteur et un tableau. 
+// affiche "Harrison,Steven,George". Une chaîne est créée à partir des chaînes contenues dans le tableau, et le délimiteur (ici la virgule) est placé entre chaque élément du tableau.
+// pour utiliser implode(), le délimiteur est un paramètre optionnel
+echo implode($persons); // affiche "HarrisonStevenGeorge".
+```

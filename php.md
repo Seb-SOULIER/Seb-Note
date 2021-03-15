@@ -251,3 +251,116 @@ var_dump($weapons);
   }
 */
 ```
+    count()
+    Permet de compter le nombre d'éléments d'un tableau.
+
+  $weapons = ['whip', 'gun', 'saber'];
+
+  echo count($weapons); // affiche 3
+
+    sort()
+    Permet de trier un tableau par ordre croissant de valeur.
+
+  $array = [2, 4, 1, 0, 8, 5];
+
+  sort($array);
+
+  var_dump($array); 
+
+  /*
+
+    affiche:
+
+    array(6) {
+
+      [0] => int(0)
+
+      [1] => int(1)
+
+      [2] => int(2)
+
+      [3] => int(4)
+
+      [4] => int(5)
+
+      [5] => int(8)
+
+    }
+
+  */
+
+Cela marche aussi si tu as un tableau ayant pour valeur des chaînes de caractères. Le tableau sera trié par ordre alphabétique.
+
+  $weapons = ['whip', 'gun', 'saber'];
+
+  sort($weapons);
+
+  var_dump($weapons);
+
+  /*
+
+    affiche:
+
+    array(3) {
+
+      [0] => string(3) "gun"
+
+      [1] => string(5) "saber"
+
+      [2] => string(4) "whip"
+
+    }
+
+  */
+
+La fonction sort() ne sert qu'à trier des tableaux numériques. Si tu l'utilises sur un tableau associatif tu perds l'association clé => valeur.
+Note: Cette fonction assigne de nouvelles clés pour les éléments du paramètre array. Elle
+effacera toutes les clés existantes que vous aviez pu assigner, plutôt que de les trier.
+
+Il existe d'autres fonctions pour un tableau associatif :
+
+    asort()
+
+Permet d'effectuer un tri sur les valeurs en gardant les clés intactes
+
+    ksort()
+
+Permet d'effectuer un tri sur les clés en gardant les valeurs intactes
+
+Dans chacune de ces fonctions, tu vas pouvoir définir si tu souhaites un tri ascendant ou descendant. N'hésite pas à consulter la documentation pour savoir comment procéder....
+
+Contrairement à la plupart des fonctions php, tu ne peux pas faire :
+$sortedWeapons = sort($weapons);
+En effet, l'utilisation de sort() (comme toute autre fonction de tri) modifie directement le tableau passé en paramètre et retourne TRUE ou FALSE selon si le tri a fonctionné ou non.
+
+Toutes ces fonctions de tri travaillent sur le tableau lui-même, contrairement à la pratique normale qui serait de retourner le tableau trié.
+
+    in_array()
+    Permet de vérifier la présence d'une valeur dans un tableau.
+
+  $weapons = ['whip', 'gun', 'saber'];
+
+  var_dump(in_array('whip', $weapons)); // affiche true
+
+  var_dump(in_array('shield', $weapons)); // affiche false
+
+Cette fonction est très utile lorsque tu l'utilises dans une structure conditionnelle :
+
+  if (in_array('shield', $weapons)) { 
+
+    echo "La valeur 'shield' est déjà présente dans le tableau";
+
+  } else {
+
+    $weapons[] = 'shield';
+
+    echo "La valeur 'shield' a été ajoutée au tableau weapons. Tu peux donc l'afficher de cette façon: $weapons[3]";
+
+  }
+
+    array_sum()
+    Permet de calculer la somme des valeurs d'un tableau.
+
+  $values = [1, 2, 3, 4, 5];
+
+  echo array_sum($values); // affiche 15

@@ -142,6 +142,11 @@ git merge <BRANCHNAME> // Fusionner une branche dans la branche courante
 git branch -d <BRANCHNAME> // Supprimer une branche locale
 git push <REMOTENAME> --delete <BRANCHNAME> // Supprimer une branche distante
 git pull <REMOTENAME> <BRANCHNAME> // Tirer depuis une branche distante
+git log --oneline // donne les commits
+git checkout <number du commit> // Va sur la branch du commit
+git revert // revient au commit precedent
+git reset <number du commit> // efface tout apres ce commit --hard et ne garde pas le commit effacé
+git revert HEAD // annule le dernier commit
 ```
 ```js
 .gitignore  // Fichier nommé dedans ignoré dans le git 

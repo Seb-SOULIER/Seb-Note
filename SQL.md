@@ -37,3 +37,29 @@ SELECT firstname FROM knight;
 $pdo = new \PDO('mysql:host=localhost;dbname=database_name', 'wilder_username', 'wilder_password');
 ```
 
+## Connection entre les tables  
+Pour définir une contrainte de clé étrangère, une fois le champ school_id créé, il faut taper la commande SQL suivante :
+
+```Terminal
+ALTER TABLE wizard
+ADD CONSTRAINT fk_wizard_school 
+FOREIGN KEY (school_id) 
+REFERENCES school(id);
+```
+
+Il est également possible de définir une contrainte de clé étrangère directement à la création d’une table, par ex :
+```terminal
+CREATE TABLE wizard (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    firstname VARCHAR(100) NOT NULL,
+    lastname VARCHAR(100) NOT NULL,
+    CONSTRAINT fk_wizard_school      
+        FOREIGN KEY (school_id)             
+        REFERENCES school(id)    
+);
+```
+Dans les deux cas, les mots-clés à retenir sont :  
+
+    CONSTRAINT : tu indiques ici le nom que tu souhaites, qui te permet d’identifier ta contrainte.  
+    FOREIGN KEY() : indique que tu souhaites créer une contrainte de type “clé étrangère” sur le champ indiqué entre les parenthèses, ici school_id, de la table wizard.  
+    REFERENCES () : et ce dernier mot-clé indique que la clé étrangère fait référence ici au champ id de la table school.  

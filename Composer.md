@@ -18,4 +18,18 @@ Creation du fichier composer.json
 ```terminal
 composer install
 ```
-require lae fichier autoload.php dans index.php
+require lae fichier autoload.php dans index.php.
+
+## Installer une librairie
+Dans le terminal
+```terminal
+composer require <vendor>/<package_name>
+```
+<vendor> representant le nom de l'éditeur du package et <âckage_name> le nom du package  
+    
+Si tu ne connais pas la librairie:
+```terminal
+composer require
+```
+affiche une liste des librairies
+  

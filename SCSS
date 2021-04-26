@@ -3,3 +3,40 @@
     // your Styles here
   }
 }
+
+$mainColor : orange;
+.default-presentation {
+    color: $mainColor;
+    background-color: lighten ($mainColor, 70);
+    font-size: 1.2em;
+    padding: 10px;
+    border-radius:4px;
+}
+.myDefaultTitle { 
+    @extend .default-presentation; 
+    // ... autres propriétés propres au titre
+}
+.myDefaultAlertBox { 
+    @extend .default-presentation; 
+    // ... autres propriétés propres à la box...
+}
+
+@mixin myShadows ($x, $y, $blur, $color) {
+    text-shadow : $x $y $blur $color;
+    box-shadow : $x/2 $y/2 $blur/2 lighten($color, 50);    
+} 
+
+.myText {
+    @include myShadows(6px 6x 4px #ff0000);
+}
+
+@mixin myTest ($paramRequired, $colorOptional: black) { 
+//... 
+}
+
+$couleur-principale: #fffff;
+$couleur-secondaire: #00000;
+.monSiteTresColore {
+    color: $couleur-principale;
+    background-color : $couleur-secondaire
+}

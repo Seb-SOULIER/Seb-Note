@@ -1,0 +1,5 @@
+@for $i from 1 through 20 {
+  span:nth-child(#{$i}) {
+    // your Styles here
+  }
+}

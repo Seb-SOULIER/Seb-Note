@@ -135,6 +135,7 @@ git push <REMOTENAME> <BRANCH> // Pousser des modifications
 git checkout -b <BRANCHNAME> // Vous pouvez créer et passer sur une branche en une seule commande
 git branch <BRANCHNAME> // Créer une nouvelle branche
 git checkout <BRANCHNAME> // Se déplacer sur une branche
+git checkout -b <BRANCHNAME> // Se déplacer et creer une branche
 git branch // Lister les branches
 git branch -m <NEWBRANCHNAME> // Renommer la branche courante
 git status // Vérifiez la branche sur laquelle vous travaillez

@@ -8,6 +8,7 @@ SGBD => Systéme de gestion de Base de Données
 mysql -u Seb -p /* lancement de MySql */
 mysql -u Seb -D Kaamelott; /* lancement MySql avec ouverture Bdd */
 CREATE DATABASE Kaamelott; /* Creation d'une base de donnée */
+SHOW DATABASE; /*affiche les bases de donnée */
 USE kaamelott; /* Entre ds la bdd */
 CREATE TABLE knight ('id' INT PRIMARY KEY AUTO_INCREMENT NOT NULL,name VARCHAR(80) NOT NULL,'age' INT NOT NULL, 'birthday' DATE, 'adresse' TEXT);
 /* Creation d'une table avec les colonnes suivantes */
@@ -29,6 +30,12 @@ TRUNCATE TABLE knight; /* Vide le tableau */
 DROP TABLE knight; /* Supprime le tableau */
 SELECT firstname FROM knight; 
 /* Affiche les firstname du tableau */ 
+
+ALTER TABLE wizard
+ADD CONSTRAINT wizard_school
+FOREIGN KEY (school_id)
+REFERENCES school(id)
+/* Securiser une table pour utilisation de plusieurs tables pour le transfert de donnée
 ```
 
 ## Lancement depuis un PHP

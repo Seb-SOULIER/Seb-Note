@@ -148,6 +148,20 @@ git checkout <number du commit> // Va sur la branch du commit
 git revert // revient au commit precedent
 git reset <number du commit> // efface tout apres ce commit --hard et ne garde pas le commit effacé
 git revert HEAD // annule le dernier commit
+
+gitK --all // copy le "SHA1 ID" du commit a recuperer
+git reset --hard <id du commit>
+
+Grumph pré-commit
+php ./vendor/bin/grumphp git:precommit
+
+git stash // mise en attente du travail
+git pull origin Dev
+git stash apply
+
+git fetch --all // voir toutes les branches
+git branch -a // voir toutes les branches local
+git cherry-pick "SHA1" // empreinte d'une branch
 ```
 ```js
 .gitignore  // Fichier nommé dedans ignoré dans le git 
@@ -155,9 +169,35 @@ git revert HEAD // annule le dernier commit
 :QA // Sortir sans quitter  
 ```
 
+## Pull request sur gitHub
+Pull requests  
+New pull request  
+base main <- compare "branch a rapatrier"  
+create pull request (remplir le commit)  
+create pull request  
+Merge pull request  
+confirm  
+Delete branch  
 
-
-
-
+## Pull request local
+```js
+git branch              // affiche la branch actuelle
+    *   master
+git branch newboss      // créer une branch newboss
+git branch              // affiche les branchs et localise la position *
+    *   master
+        newboss
+git checkout newboss    // va sur la branch newboss
+git branch
+        master
+    *   newboss
+git add .
+git commit -m "_____"
+git checkout master
+git merge newboss
+git log
+git push --set -upstream origin newboss // ajoute et merge
+git checkout -b dummy // creer la branch dummy et va dessus
+git branch -d dummy // supprime la branch
 
 

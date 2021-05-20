@@ -26,4 +26,3 @@ symfony sever:start -d
 
 Arreter le server:  
 symfony server:stop
-
